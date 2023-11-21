@@ -1,0 +1,7 @@
+# The code of the proposed curvature-driven cloud removal method 
+matlab vision
+
+run the "main.m", you can change the path to your data
+
+if the code is used and helpful for your research, please cite:
+Xiaoyu Yu, Jun Pan, Jiangong Xu & Mi Wang. (2023) Missing Information Reconstruction Integrating Isophote Constraint and Color-Structure Control for Remote Sensing Data
