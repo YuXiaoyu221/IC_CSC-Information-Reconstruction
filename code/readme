@@ -1,4 +1,4 @@
-# The code of the proposed curvature-driven cloud removal method 
+# The code of the proposed isophote-based information reconstruction method 
 matlab vision
 
 run the "main.m", you can change the path to your data
