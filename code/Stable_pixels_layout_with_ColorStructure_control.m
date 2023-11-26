@@ -3,7 +3,7 @@ function [Updated_I,Updated_Imask,Updated_J,Updated_Jmask]=Stable_pixels_layout_
 %%% == A color-structure consistency constraint is constructed to solve these pixels with high reliability.
 str_tif='.tif';
 iflag_StablePixels=p_StablePixelsSolving{1,2}; % if "Img_I & I_mask" have been updated, it can be set as 1
-iwindow_s=p_StablePixelsSolving{2,2};% the window size for comparing local similarities: iwindow_s¡Áiwindow_s£¨eg.3¡Á3£©
+iwindow_s=p_StablePixelsSolving{2,2};% the window size for comparing local similarities: iwindow_sÂ¡Ãiwindow_sÂ£Â¨eg.3Â¡Ã3Â£Â©
 iflag_SLICSeg=p_SLICSeg{1,2}; % if iflag_Kmeans_SILC_Reable has been solved already, it can be set as 1
 i_Superpixels=p_SLICSeg{2,2}; % the initial size of eack superpixel in SLIC segmatation result
 iflag_KmeansSeg=p_KmeansSeg{1,2}; % if iflag_Kmeans_SILC_Reable has been solved already, it can be set as 1
@@ -19,7 +19,7 @@ for TarImg=1:2
         J=Img_I;  str_Jt=char(str_cell(1,1));  Jt_mask=I_mask;
     end
     %%% the number of cloud areas in image
-    L_Mask=bwlabel(uint8(I_mask),4);
+    L_Mask=bwlabel(uint8(It_mask),4);
     icpend=max(max(L_Mask));%%% the number of cloud areas in image
     if icpend>0
         %%%Stable_pixels_layout
