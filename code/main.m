@@ -8,7 +8,7 @@ Jmask_str='J0_mask';
 str_cell(1,1)={I_str};
 str_cell(1,2)={J_str};
 %% =============================== data 1: 1_TrueColorComposition (Reference image J0 is Cloud-free)=============================== 
-%%% the Whole Image Cloud Removal by Curvature
+%%% the Whole Image Cloud Removal by IC_CSC
 str_InputPath='..\data\1_TrueColorComposition';
 str_cell(1,3)={str_InputPath};
 I=imread([str_InputPath,'\',I_str,'_Clouds',str_tif]);
@@ -23,7 +23,7 @@ if i_flag==0 %% set "i_flag==0" means without the step of "Stable Pixels Layout"
     Updated_Jmask=J_mask;
 elseif i_flag==1 %% set "i_flag==1" means conducting the method with the step of "Stable Pixels Layout", which takes longer time
     p_StablePixelsSolving(1,:)={'the stable pixels are unknown=0 or known=1:',0}; % you can change p_StablePixelsSolving{1,2}=0 if you want to re-solve the stable pixels
-    p_StablePixelsSolving(2,:)={'the window size for comparing local similarities:',3}; % you can it to define the window size: eg.3°¡3
+    p_StablePixelsSolving(2,:)={'the window size for comparing local similarities:',3}; % you can it to define the window size: eg.3¬°√Å3
     p_StablePixelsSolving(3,:)={'determine the similarity between I_r(p) and I_r(q):',1.8}; % the threshold to determine the similarity between I_r(p) and I_r(q):(1<t<3)
     p_StablePixelsSolving(4,:)={'determine the consistency between I_r(p) and I_t(p):',0.9}; % the threshold to determine the consistency between I_r(p) and I_t(p):(0.8<t<1)
     p_SLICSeg(1,:)={'the SLIC result is unknown=0 or known=1:',0}; % you can change p_SLICSeg{1,2}=0 if you want to re-do SLIC segmatation
@@ -36,7 +36,7 @@ end
 %%% output the result to specified path
 imwrite((OutputData_II),[str_InputPath,'\',I_str,'-Result_of_Isophote_',num2str(i_flag),str_tif]);
 %% =============================== data 2: 2_FalseColorComposition (both I0 and J0 are Cloudy)=============================== 
-%%% the Whole Image Cloud Removal by Curvature
+%%% the Whole Image Cloud Removal by IC_CSC
 str_InputPath='..\data\2_FalseColorComposition';
 str_cell(1,3)={str_InputPath};
 I=imread([str_InputPath,'\',I_str,'_Clouds',str_tif]);
