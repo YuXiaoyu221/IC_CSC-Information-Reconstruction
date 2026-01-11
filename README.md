@@ -12,3 +12,7 @@ Yu, X., Pan, J., Xu, J., Wang, M., 2024. Missing information reconstruction inte
 Here: "code" gives the matlab code of this algorithm; "data" gives two sets of data for test
 
 Note: If it is not available, you can contact me at email:1521611534@qq.com
+
+
+
+# this work is for dual-temporal image reconstruction, and we have released a new work for multi-temporal optical images reconstruction in https://github.com/YuXiaoyu221/ICMIR.
